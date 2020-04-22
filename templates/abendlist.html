@@ -1,0 +1,12 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Here is the list of all Job Abends.</h1>
+  <ul>
+    {% for i in jobs  %}
+    <li>{{i}}</li>
+    {% endfor %}
+  </ul>
+
+</div>
+{% endblock %}

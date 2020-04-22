@@ -1,0 +1,40 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="jumbotron">
+  <h1>Add a new job abend to the Repository</h1>
+  <p>Add a new job abend to the Repository with the form below:</p>
+  <form method="POST">
+      {# This hidden_tag is a CSRF security feature. #}
+      {{ form.hidden_tag() }}
+      <div>
+          {{ form.jobname.label }} : {{ form.jobname() }}
+      </div>
+      <div>
+          {{ form.issue_type.label }} : {{ form.issue_type() }}
+      </div>
+      <div>
+          {{ form.is_install_issue.label }} : {{ form.is_install_issue() }}
+      </div>
+      <div>
+          {{ form.stepname.label }} : {{ form.stepname() }}
+      </div>
+      <div>
+          {{ form.progname.label }} : {{ form.progname() }}
+      </div>
+      <div>
+          {{ form.issue_desc.label }} : {{ form.issue_desc() }}
+      </div>
+      <div>
+          {{ form.issue_res.label }} : {{ form.issue_res() }}
+      </div>
+      <div>
+          {{ form.inc_ticket.label }} : {{ form.inc_ticket() }}
+      </div>
+      <div>
+          {{ form.time_lost.label }} : {{ form.time_lost() }}
+      </div>
+      <br>
+      {{ form.submit() }}
+  </form>
+</div>
+{% endblock %}
