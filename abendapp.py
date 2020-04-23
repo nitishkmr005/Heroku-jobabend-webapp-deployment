@@ -174,4 +174,4 @@ def abend_list():
 
 if __name__ == '__main__':
     db.create_all()
-    app.run(debug=Flase)
+    app.run(debug=False)
