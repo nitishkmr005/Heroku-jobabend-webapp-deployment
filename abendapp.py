@@ -18,6 +18,7 @@ db = SQLAlchemy(app)
 class Abend(db.Model):
 
     __tablename__ = 'abend'
+    __table_args__ = {'quote':False,'extend_existing':True}
 
     id               = db.Column(db.Integer,primary_key = True)
     jobname          = db.Column(db.Text)
@@ -48,6 +49,8 @@ class Abend(db.Model):
 class Emp(db.Model):
 
     __tablename__ = 'emp'
+    __table_args__ = {'quote':False,'extend_existing':True}
+    
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.Text)
     team = db.Column(db.Text)
