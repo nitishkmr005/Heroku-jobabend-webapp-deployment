@@ -17,7 +17,7 @@ db = SQLAlchemy(app)
 # Emp table
 class Abend(db.Model):
 
-    #__tablename__ = 't_abend'
+    __tablename__ = 't_abend'
 
     id               = db.Column(db.Integer,primary_key = True)
     jobname          = db.Column(db.Text)
@@ -47,7 +47,7 @@ class Abend(db.Model):
 
 class Emp(db.Model):
 
-    #__tablename__ = 't_emp'
+    __tablename__ = 't_emp'
     id = db.Column(db.Integer,primary_key = True)
     name = db.Column(db.Text)
     team = db.Column(db.Text)
@@ -174,4 +174,4 @@ def abend_list():
 
 if __name__ == '__main__':
     db.create_all()
-    app.run(debug=False)
+    app.run(debug=True)
